@@ -6,9 +6,6 @@
 #include "GameFramework/GameModeBase.h"
 #include "KickBallGameModeBase.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class KICKBALL_API AKickBallGameModeBase : public AGameModeBase
 {
