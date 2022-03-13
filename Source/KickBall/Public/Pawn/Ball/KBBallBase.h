@@ -17,6 +17,9 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = StaticMesh)
+	class UStaticMeshComponent* StaticMeshComponent;
+
 public:
 	virtual void Tick(float DeltaTime) override;
 

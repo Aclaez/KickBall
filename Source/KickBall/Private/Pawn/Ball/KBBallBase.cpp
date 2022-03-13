@@ -2,11 +2,17 @@
 
 
 #include "Pawn/Ball/KBBallBase.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/SphereComponent.h"
 
 AKBBallBase::AKBBallBase()
 {
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = true;	
 
+	StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>("StaticMesh");
+	SetRootComponent(StaticMeshComponent);
+	StaticMeshComponent->SetSimulatePhysics(true);
+	StaticMeshComponent->SetLinearDamping(-1.0f);
 }
 
 void AKBBallBase::BeginPlay()
